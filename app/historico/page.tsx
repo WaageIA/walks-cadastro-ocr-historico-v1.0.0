@@ -163,7 +163,7 @@ export default function HistoricoPage() {
                 <CardTitle>Distribuição Mensal</CardTitle>
                 <CardDescription>Comparativo entre Follow-ups e Clientes Ganhos</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 {loading ? (
                   <Skeleton className="h-64 w-full" />
                 ) : (
@@ -178,7 +178,7 @@ export default function HistoricoPage() {
                         color: "#10b981",
                       },
                     }}
-                    className="h-64"
+                    className="min-h-[250px] w-full"
                   >
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={dadosGraficoBarras}>
@@ -198,7 +198,7 @@ export default function HistoricoPage() {
                 <CardTitle>Proporção de Cadastros</CardTitle>
                 <CardDescription>Visualização da distribuição dos tipos de cadastro</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 {loading ? (
                   <Skeleton className="h-64 w-full" />
                 ) : (
@@ -213,7 +213,7 @@ export default function HistoricoPage() {
                         color: "#10b981",
                       },
                     }}
-                    className="h-64"
+                    className="min-h-[250px] w-full"
                   >
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
