@@ -20,6 +20,14 @@ import Header from "@/app/components/Header"
 import { useAdvancedSecurity } from "@/app/hooks/useAdvancedSecurity"
 import { validateEmail } from "@/lib/security"
 
+const formatPhone = (phone: string) => {
+  return phone
+    .replace(/\D/g, "")
+    .replace(/(\d{2})(\d)/, "($1) $2")
+    .replace(/(\d{4,5})(\d)/, "$1-$2")
+    .substring(0, 15)
+}
+
 interface FollowUpFormData {
   responsavel: string
   email: string
@@ -163,7 +171,7 @@ export default function FollowUpPage() {
         followup_data: {
           responsavel: formData.responsavel,
           email: formData.email,
-          telefone: formData.telefone,
+          telefone: formatPhone(formData.telefone),
           empresa: formData.empresa,
           produto_interesse: formData.produtoInteresse,
           nota_interesse: formData.notaInteresse,
@@ -303,8 +311,8 @@ export default function FollowUpPage() {
                 <Input
                   id="telefone"
                   type="tel"
-                  value={formData.telefone}
-                  onChange={(e) => handleInputChange("telefone", e.target.value)}
+                  value={formatPhone(formData.telefone)}
+                  onChange={(e) => handleInputChange("telefone", e.target.value.replace(/\D/g, ""))}
                   required
                 />
               </div>

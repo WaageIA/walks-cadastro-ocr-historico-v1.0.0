@@ -7,9 +7,11 @@ import { UserPlus, Users, BarChart3 } from "lucide-react"
 
 import Header from "@/app/components/Header"
 import ProtectedRoute from "@/app/components/ProtectedRoute"
+import { useAuth } from "@/app/context/AuthContext"
 
 export default function HomePage() {
   const router = useRouter()
+  const { user } = useAuth()
 
   const handleNavigateToCustomer = () => {
     router.push("/")
@@ -27,6 +29,12 @@ export default function HomePage() {
     <ProtectedRoute>
       <div className="min-h-screen bg-gray-50">
         <Header />
+
+        {user && (
+          <div className="text-center text-gray-600 text-sm mt-4 mb-8">
+            <p>Logado: {user.email}</p>
+          </div>
+        )}
 
         <main className="container mx-auto px-4 py-8">
           <div className="mb-8">

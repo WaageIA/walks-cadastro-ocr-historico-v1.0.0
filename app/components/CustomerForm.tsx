@@ -580,12 +580,20 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
                 Faturamento Estimado
                 {getFieldIcon("faturamentoEstimado")}
               </Label>
-              <Input
-                id="faturamentoEstimado"
+              <Select
                 value={formData.faturamentoEstimado}
-                onChange={(e) => handleInputChange("faturamentoEstimado", e.target.value)}
-                placeholder="R$ 0,00"
-              />
+                onValueChange={(value) => handleInputChange("faturamentoEstimado", value)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione o faturamento..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="R$ 10.000,00 a R$ 20.000,00">R$ 10.000,00 a R$ 20.000,00</SelectItem>
+                  <SelectItem value="R$ 20.000,00 a R$ 50.000,00">R$ 20.000,00 a R$ 50.000,00</SelectItem>
+                  <SelectItem value="R$ 50.000,00 a R$ 100.000,00">R$ 50.000,00 a R$ 100.000,00</SelectItem>
+                  <SelectItem value="Acima de R$ 100.000,00">Acima de R$ 100.000,00</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </CardContent>
         </Card>
