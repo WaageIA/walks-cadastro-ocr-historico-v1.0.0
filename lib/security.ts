@@ -316,7 +316,7 @@ export function validateEmail(email: string): { valid: boolean; error?: string }
 
 export function validateCustomerData(data: Record<string, any>) {
   const errors: string[] = []
-  const required = ["empresa", "email", "cnpj", "nomeCompleto", "cpf"]
+  const required = ["empresa", "email", "cnpj", "nomeCompleto", "cpf", "celularProprietario"]
 
   required.forEach((f) => {
     if (!data[f] || (typeof data[f] === "string" && !data[f].trim())) errors.push(`Campo obrigatório: ${f}`)

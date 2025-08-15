@@ -465,7 +465,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
           <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="empresa" className="flex items-center gap-2">
-                Empresa
+                * Empresa
                 {getFieldIcon("empresa")}
               </Label>
               <Input
@@ -477,7 +477,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
             </div>
             <div>
               <Label htmlFor="produtoInteresse" className="flex items-center gap-2">
-                Produto de Interesse
+                * Produto de Interesse
                 <Package className="w-3 h-3 text-gray-500 opacity-60" />
               </Label>
               <Select
@@ -488,22 +488,22 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
                   <SelectValue placeholder="Selecione um produto..." />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="whitelabs-franquias">Whitelabs/Franquias</SelectItem>
-                    <SelectItem value="marketplace">Marketplace</SelectItem>
-                    <SelectItem value="banco-digital">Banco Digital</SelectItem>
-                    <SelectItem value="tap-to-pay">Tap-to-Pay</SelectItem>
-                    <SelectItem value="maquina-cartao">Máquina de Cartão</SelectItem>
-                    <SelectItem value="pdv">PDV</SelectItem>
-                    <SelectItem value="pdv-maquinha-cartao">PDV + maquinas de cartão</SelectItem>
-                    <SelectItem value="totem">Totem</SelectItem>
-                    <SelectItem value="walks-pay">Walks Pay</SelectItem>
-                    <SelectItem value="outros">Outros</SelectItem>
+                  <SelectItem value="whitelabs-franquias">Whitelabs/Franquias</SelectItem>
+                  <SelectItem value="marketplace">Marketplace</SelectItem>
+                  <SelectItem value="banco-digital">Banco Digital</SelectItem>
+                  <SelectItem value="tap-to-pay">Tap-to-Pay</SelectItem>
+                  <SelectItem value="maquina-cartao">Máquina de Cartão</SelectItem>
+                  <SelectItem value="pdv">PDV</SelectItem>
+                  <SelectItem value="pdv-maquinha-cartao">PDV + maquinas de cartão</SelectItem>
+                  <SelectItem value="totem">Totem</SelectItem>
+                  <SelectItem value="walks-pay">Walks Pay</SelectItem>
+                  <SelectItem value="outros">Outros</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div>
               <Label htmlFor="email" className="flex items-center gap-2">
-                E-mail
+                * E-mail
                 {getFieldIcon("email")}
               </Label>
               <Input
@@ -516,7 +516,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
             </div>
             <div>
               <Label htmlFor="cnpj" className="flex items-center gap-2">
-                CNPJ
+                * CNPJ
                 {getFieldIcon("cnpj")}
               </Label>
               <Input
@@ -674,7 +674,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
           <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="nomeCompleto" className="flex items-center gap-2">
-                Nome Completo
+                * Nome Completo
                 {getFieldIcon("nomeCompleto")}
               </Label>
               <Input
@@ -698,7 +698,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
             </div>
             <div>
               <Label htmlFor="cpf" className="flex items-center gap-2">
-                CPF
+                * CPF
                 {getFieldIcon("cpf")}
               </Label>
               <Input
@@ -735,7 +735,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
             </div>
             <div>
               <Label htmlFor="celularProprietario" className="flex items-center gap-2">
-                Celular
+                * Celular
                 {getFieldIcon("celularProprietario")}
               </Label>
               <Input
