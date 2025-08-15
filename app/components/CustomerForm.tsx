@@ -281,7 +281,7 @@ export default function CustomerForm({ ocrData, uploadedDocuments, onSubmit }: C
         dataNascimento: formData.dataNascimento,
         cpf: formData.cpf ? formatCPF(formData.cpf) : "",
         enderecoProprietario: formData.enderecoProprietario,
-        emailProprietario: formData.emailProprietario,
+        emailProprietario: formData.emailProprietario || "proprietario@exemplo.com",
         celularProprietario: formData.celularProprietario ? formatPhone(formData.celularProprietario) : "",
 
         // Conta Bancária

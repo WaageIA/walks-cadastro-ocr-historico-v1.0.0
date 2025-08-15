@@ -26,7 +26,7 @@ export default function RootLayout({
           <Toaster />
         </AuthProvider>
         <footer className="fixed bottom-2 right-4 text-xs text-gray-400 z-10">
-          v1.0.0 • Powered by Waage AI Solutions
+          v1.0.1 • Powered by Waage AI Solutions
         </footer>
       </body>
     </html>
